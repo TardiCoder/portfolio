@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Contact</title>
-    <h1>
-        <nav>
-            <uL>
-                <li><a href="https://tardicoder.github.io/portfolio">Main Page</a></li>
-                <li><a href="https://tardicoder.github.io/portfolio/contact">Contact</li>
-                <li><a href="https://tardicoder.github.io/portfolio/projects">Projects</a></li>
-                <li><a href="https://github.com/TardiCoder" target="_blank">Profile Page</a></li>   
-            </uL>
-        </nav>
-        Contact Page</h1>
 </head>
 <body>
-    <form action="mailto:eli.b.kranjec@gmail.com" method = "POST" enctype="text/plain">
-    <label><input type="email" name = "email"/> Email</label>
-    <label><input name="Subject"/> Subject</label>
-    <textarea name = "body"></textarea>
-    <button type="submit"></button>
-    </form>
+    <h1>
+    <nav>
+        <ul>
+            <li><a href="https://tardicoder.github.io/portfolio">Main Page</a></li>
+            <li><a class="current" href="https://tardicoder.github.io/portfolio/contact">Contact</a></li>
+            <li><a href="https://tardicoder.github.io/portfolio/projects">Projects</a></li>
+            <li><a href="https://github.com/TardiCoder" target="_blank">Profile Page</a></li>   
+        </ul>
+    </nav>
 
+    Contact Page</h1>
+    
+    <form action="mailto:eli.b.kranjec@gmail.com" method="POST" enctype="text/plain">
+        <label>Email: <input type="email" name="email" /></label><br>
+        <label>Subject: <input name="Subject" /></label><br>
+        <textarea name="body"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
