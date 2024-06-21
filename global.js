@@ -21,14 +21,7 @@ let pages = [
 
 let nav = document.createElement("nav");
 document.body.prepend(nav);
-document.body.insertAdjacentHTML("afterbegin", <label>Theme
-
-<select class="theme">
-    <option value = "dark">Dark</option>
-    <option value = "light">Light</option>
-</select>
-
-</label>);
+document.body.insertAdjacentHTML("afterbegin", "<label>Theme <select class='theme'> <option value = 'dark'>Dark</option> <option value = 'light'>Light</option> </select> </label>");
 
 select = document.querySelector(selector);
 select.addEventListener("input", function (event)  {
