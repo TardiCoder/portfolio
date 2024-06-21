@@ -3,13 +3,18 @@ body {
        and use the OS’s UI font as the website font
      */
     font: 100%/1.5 system-ui;
-    max-width: 100ch;
+    
     margin-inline: auto;
     --color-accent: black;
     accent-color: var(--color-accent);
     
 
    }
+
+p, img{
+
+    max-width: 100ch;
+}
 
 a{
 
@@ -23,16 +28,18 @@ a{
     border-bottom-style: solid;
     border-bottom-color: grey;
     padding-bottom: 10px;
+    
 }
 
 nav{
-    
-    margin-bottom: 50px;
-    font-size: 2em;
-    font-weight: bold;
 
+    margin-bottom: 50px;
+    font-size: 1em;     
+    font-weight: bold;  
+    max-width: 100%;
     
 }
+
 
 .current{
 
@@ -81,6 +88,7 @@ form{
 
 }
 
+
 image{
 
     max-width: 100%;
@@ -100,11 +108,21 @@ article{
 h2{
 
    margin: 0;
-    size: 400%;
+   size: 400%;
 }
 
 h1, h2, h3, h4, h5, h6{
 
     line-height: 1.1;
     text-wrap: balance;
+}
+
+.navbar{
+
+    font-size: 2em;
+}
+
+.contact_navbar{
+
+    font-size: 4em;
 }
