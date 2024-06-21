@@ -21,13 +21,7 @@ let pages = [
 
 let nav = document.createElement("nav");
 document.body.prepend(nav);
-document.body.insertAdjacentHTML("afterbegin", "<label>Theme <select class='theme'> <option value = 'dark'>Dark</option> <option value = 'light'>Light</option> </select> </label>");
 
-select = document.querySelector(selector);
-select.addEventListener("input", function (event)  {
-
-    console.log("color scheme change detected ->" + event.target.value);
-});
 
 for (let p of pages) {
     
@@ -46,6 +40,14 @@ for (let p of pages) {
 
 
 }
+
+document.body.insertAdjacentHTML("afterbegin", "<label> <select class='theme'> <option value = 'dark'>Dark Mode</option> <option value = 'light'>Light Mode</option> </select> </label>");
+
+select = document.querySelector(selector);
+select.addEventListener("input", function (event)  {
+
+    console.log("color scheme change detected ->" + event.target.value);
+});
 
 
 
