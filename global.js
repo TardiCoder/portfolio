@@ -5,12 +5,7 @@ function $$ (selector, context = document) {
 }
 let navLinks = $$("nav a");
 
-if (a.host === location.host && a.pathname === location.pathname) {
-	a.classList.add("current");
-} else if (a.pathname === location.pathname) {
-    a.target = "_blank";
 
-}
 
 
 // let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
@@ -35,6 +30,12 @@ for (let p of pages) {
     a.href = url;
     a.textContent = title;
     nav.append(a);
+    if (a.host === location.host && a.pathname === location.pathname) {
+        a.classList.add("current");
+    } else if (a.pathname === location.pathname) {
+        a.target = "_blank";
+    
+    }
 
 
 }
