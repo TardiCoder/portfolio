@@ -41,12 +41,18 @@ for (let p of pages) {
 
 }
 
+
 document.body.insertAdjacentHTML("afterbegin", "<label> <select class='theme'> <option value = 'dark'>Dark Mode</option> <option value = 'light'>Light Mode</option> </select> </label>");
 
 select = document.querySelector(selector);
+
+select.value = localStorage?.colorScheme
 select.addEventListener("input", function (event)  {
 
     console.log("color scheme change detected ->" + event.target.value);
+    document.documentElement.style.setProperty("color-scheme", event.target.value);
+    localStorage.colorScheme = event.target.value;
+    
 });
 
 
