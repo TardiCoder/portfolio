@@ -3,12 +3,16 @@ console.log("Test");
 function $$ (selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
+let navLinks = $$("nav a");
 
 if (a.host === location.host && a.pathname === location.pathname) {
 	a.classList.add("current");
+} else if (a.pathname === location.pathname) {
+    a.target = "_blank";
+
 }
 
-// let navLinks = $$("nav a");
+
 // let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
 // currentLink?.classList.add("current");
 // console.log(currentLink);
