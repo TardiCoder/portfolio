@@ -11,7 +11,8 @@ currentLink?.classList.add("current");
 let pages = [
     {url: "", title :"Home"},
     {url: "projects/", title: "Projects"},
-    {url: "contact/", title: "Contact"}
+    {url: "contact/", title: "Contact"},
+    {url: "https://github.com/TardiCoder/", title: "Github Page"}
 ];
 
 let nav = document.createElement("nav");
