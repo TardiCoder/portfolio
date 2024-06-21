@@ -4,10 +4,14 @@ function $$ (selector, context = document) {
     return Array.from(context.querySelectorAll(selector));
 }
 
-let navLinks = $$("nav a");
-let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
-currentLink?.classList.add("current");
-console.log(currentLink);
+if (a.host === location.host && a.pathname === location.pathname) {
+	a.classList.add("current");
+}
+
+// let navLinks = $$("nav a");
+// let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
+// currentLink?.classList.add("current");
+// console.log(currentLink);
 
 let pages = [
     {url: "https://tardicoder.github.io/portfolio/", title :"Home"},
@@ -23,7 +27,11 @@ for (let p of pages) {
     
     let url = p.url;
     let title = p.title;
-    nav.insertAdjacentHTML("beforeend", `<a href="${ url }">${ title }</a>` );
+    let a = document.createElement("a");
+    a.href = url;
+    a.textContent = title;
+    nav.append(a);
+
 
 }
 
