@@ -7,11 +7,12 @@ function $$ (selector, context = document) {
 var navLinks = $$("nav a");
 let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname)
 currentLink?.classList.add("current");
+console.log(currentLink);
 
 let pages = [
-    {url: "", title :"Home"},
-    {url: "projects/", title: "Projects"},
-    {url: "contact/", title: "Contact"},
+    {url: "https://tardicoder.github.io/portfolio/", title :"Home"},
+    {url: "https://tardicoder.github.io/portfolio/projects/", title: "Projects"},
+    {url: "https://tardicoder.github.io/portfolio/contact/", title: "Contact"},
     {url: "https://github.com/TardiCoder/", title: "Github Page"}
 ];
 
