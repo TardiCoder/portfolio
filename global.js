@@ -44,7 +44,7 @@ for (let p of pages) {
 
 document.body.insertAdjacentHTML("afterbegin", "<label> <select class='theme'> <option value = 'dark'>Dark Mode</option> <option value = 'light'>Light Mode</option> </select> </label>");
 
-select = document.querySelector(selector);
+select = document.querySelector("select");
 
 select.value = localStorage?.colorScheme
 select.addEventListener("input", function (event)  {
