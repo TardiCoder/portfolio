@@ -46,7 +46,11 @@ document.body.insertAdjacentHTML("afterbegin", "<label> <select class='theme'> <
 
 var select = document.querySelector(".theme");
 
-select.value = localStorage?.colorScheme;
+if (select.value != null || select.value != undefined){
+    select.value = localStorage.colorScheme;
+} else {
+    select.value = 'dark';
+}
 select.addEventListener("input", function (event)  {
 
     console.log("color scheme change detected ->" + event.target.value);
