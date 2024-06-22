@@ -1,7 +1,7 @@
 console.log("Test");
 
 function $$ (selector, context = document) {
-    return Array.from(context.querySelectorAll("select"));
+    return Array.from(context.querySelectorAll(selector));
 }
 let navLinks = $$("nav a");
 
