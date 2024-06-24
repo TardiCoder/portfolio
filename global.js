@@ -46,14 +46,16 @@ document.body.insertAdjacentHTML("afterbegin", "<label> <select class='theme'> <
 
 var select = document.querySelector(".theme");
 
-if (select.value != null || select.value != undefined){
+if (localStorage.colorScheme != null || localStorage.colorScheme != undefined){
+    document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
     select.value = localStorage.colorScheme;
-} else {
+} else{
     select.value = 'dark';
+    document.documentElement.style.setProperty("color-scheme", select.value);
+    localStorage.colorScheme  = select.value;
 }
 select.addEventListener("input", function (event)  {
 
-    console.log("color scheme change detected ->" + event.target.value);
     document.documentElement.style.setProperty("color-scheme", event.target.value);
     localStorage.colorScheme = event.target.value;
     
